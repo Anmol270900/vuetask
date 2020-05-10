@@ -17,6 +17,7 @@ export default {
   },
   methods: {
         checkNum() {
+
             if(isNaN(this.number))
             {
                 alert('Please enter a numeric value');
@@ -24,26 +25,23 @@ export default {
             else
             {
                 this.$emit('calCube', this.number);
-                this.number = ''
+                
             }
+            //this.number = ''
         }
     }
 }
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+form {
+        display: flex;
+    }
+    input[type="text"] {
+        flex: 10;
+        padding: 5px;
+    }
+    input[type="submit"] {
+        flex: 2;
+    }
 </style>
