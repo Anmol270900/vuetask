@@ -17,15 +17,15 @@ export default {
   },
   methods: {
         checkNum() {
-            //e.preventDefault();
-            //number: this.number;
-            // Send up to parent
-            console.log(123);
-            this.$emit('calCube', this.number);
-
-            //this.number = '';
-
-            this.number = ''
+            if(isNaN(this.number))
+            {
+                alert('Please enter a numeric value');
+            }
+            else
+            {
+                this.$emit('calCube', this.number);
+                this.number = ''
+            }
         }
     }
 }

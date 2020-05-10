@@ -2,7 +2,6 @@
   <div id="app">
     <HelloWorld msg="Enter a number to obtain its cube : "/>
     <Number v-on:calCube="calCube" />
-    <HelloWorld v-bind:cube="`this.cube`" />
     <h1>{{this.cube}}</h1>
   </div>
 </template>
@@ -19,7 +18,7 @@ export default {
   },
   data() {
     return {
-      cube: 0
+      cube: ''
     }
   },
   methods: {
